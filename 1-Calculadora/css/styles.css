@@ -1,0 +1,83 @@
+* { /* modificar propiedad general */
+    margin: 0; /* margenes */
+    padding: 0; /* relleno alrededor del contenido */
+    box-sizing: border-box; /* ancho dentro del relleno */
+    font-family: sans-serif; /* fuentes */
+}
+
+body {
+    min-height: 100vh; /* view for height, es la altura de la pantalla en porcentajes (que se ajuste al 100% de la pantalla) */
+    background-color: rgb(238, 177, 108);
+    display: flex; /* flexibilidad */
+    justify-content: center; /* justificar el contenido al centro */
+    align-items: center; /* alinear los objetos al centro */
+}
+
+.calculadora {
+    background-color: rgb(226, 161, 85);
+    box-shadow: 0px 1px 15px  rgb(122, 70, 2);
+    color: rgb(73, 76, 78);
+    display: grid; /* columnas */
+    grid-template-columns: repeat(4, 1fr); /* columnas por fila */
+    width: 350px; /* ancho */
+    padding: 1rem;  /* relleno */
+    border-radius: 1rem; /* bordes */
+    gap: 0.7rem; /* separación entre elementos */
+}
+
+.pantalla {
+    grid-column: 1/5; /* columnas */
+    background-color: rgb(255, 255, 255);
+    padding: 1rem; /* relleno */
+    font-size: 3rem; /* tamaño de la fuente */
+    text-align: right; /* alinear el texto a la derecha */
+    border-radius: 0.5rem; /* bordes */
+    font-weight: 600; /* ancho del texto */
+    margin-bottom: 0.5rem; /* margen de arriba */
+}
+
+.boton {
+    background-color:rgb(255, 102, 0);
+    color: rgb(255, 255, 255);
+    border: 0; /* bordes */
+    padding: 1rem;
+    font-size: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    cursor: pointer; /* el mouse cambia su apariencia al momento de pasarlo por encima de los botones */
+}
+
+.boton:hover { /* para cambiar el color del boton mientras que el mouse esté encima */
+    background-color:rgb(255, 136, 56);
+}
+
+#cero {
+    grid-column: span 2; /* para expandir el boton en toda la columna */
+}
+
+#igual {
+    grid-row: span 2; /* para expandir el boton en toda la fila */
+    background-color:rgb(189, 75, 0);
+}
+
+#igual:hover {
+    background-color:rgb(255, 136, 56);
+}
+
+#limpiar {
+    background-color:rgb(189, 75, 0);
+}
+
+#limpiar:hover {
+    background-color:rgb(255, 136, 56);
+}
+
+#borrar {
+    background-color:rgb(189, 75, 0);
+}
+
+#borrar:hover {
+    background-color:rgb(255, 136, 56);
+}
